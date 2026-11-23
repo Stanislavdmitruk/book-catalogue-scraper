@@ -203,7 +203,7 @@ def _category_sheet(ws, df: pd.DataFrame) -> None:
         chart.add_data(data, titles_from_data=True)
         chart.set_categories(labels)
         chart.x_axis.scaling.orientation = "maxMin"  # biggest category on top
-        chart.x_axis.delete = False  # openpyxl 3.1 hides axes unless told otherwise
+        chart.x_axis.delete = False  # show both axes explicitly
         chart.y_axis.delete = False
         ws.add_chart(chart, "I2")
 
